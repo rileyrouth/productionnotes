@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Epunda+Sans:ital,wght@0,300..900;1,300..900&display=swap');
+
+$clr-background: hsl(204, 41%, 98%);
+$clr-body: hsl(204, 41%, 2%);
+$clr-accent: hsl(0, 41%, 47%);
+$clr-accent-light: hsl(204, 41%, 90%);
+
+$ff-header: "Epunda Sans";
+$ff-body: $ff-header;
+
+$fs-header: 1.5rem;
+$fs-body: 1.1rem;
+$fs-detail: 0.9rem;
+
+body {
+  background: $clr-background;
+  color: $clr-body;
+  font-family: $ff-body;
+  font-size: $fs-body;
+}
+
+.container {
+  max-width:45rem;
+  margin-inline:auto;
+  padding:1rem;
+}
+
+header {
+  background-color: $clr-accent;
+  color: $clr-background;
+  .container {
+    display:flex;
+    justify-content: space-between;
+    gap:2rem;
+    > h2:last-of-type {
+      text-align:right;
+    }
+  }
+  a {
+    color:unset;
+    text-decoration:none;
+  }
+}
+
+header {
+  .author {
+    position:relative;
+    &:hover::before {
+      content:'\e88a';
+      position:absolute;
+      left:-2rem;
+      font-size:$fs-header;
+      font-family: "Material Symbols Outlined"
+    }
+  }
+  .issue {
+    text-align:right;
+  }
+}
+
+main {
+  p {
+    margin-block-end: 1rem;
+    text-align:justify;
+  }
+  a {
+    text-decoration:none;
+    color: $clr-accent;
+  }
+  .lede {
+    font-size:$fs-header;
+    font-weight:700;
+  }
+  hr {
+    margin:0;
+  }
+}
+
+.posts a {
+  display:block;
+  color:$clr-body;
+  line-height:1rem;
+  text-align:left;
+  &:hover {
+    color:$clr-accent;
+  }
+  .title {
+    font-weight:500;
+    margin:0;
+  }
+  .summary {
+    font-size:$fs-detail;
+  }
+  .author {
+    font-size: $fs-detail;
+    font-style:italic;
+  }
+}
+
+nav {
+  display:flex;
+  justify-content: space-between;
+}

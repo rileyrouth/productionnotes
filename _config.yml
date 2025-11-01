@@ -1,0 +1,11 @@
+url: "https://productionnotes.rileyrouth.com"
+title: "Production Notes"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+
+permalink: :title
